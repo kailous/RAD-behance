@@ -12,8 +12,10 @@ export default function ProjectCard({ project }) {
         {imgSrc ? <img src={imgSrc} alt={project.name} loading="lazy" /> : <div className={styles.imageFallback} />}
       </div>
       <div className={styles.body}>
-        <h3 className={styles.title}>{project.name}</h3>
-        <p className={styles.fields}>{(project.fields || []).join(' · ')}</p>
+        <div className={styles.content}>
+          <h3 className={styles.title}>{project.name}</h3>
+          <p className={styles.fields}>{(project.fields || []).join(' · ')}</p>
+        </div>
         <div className={styles.meta}>
           {project.stats?.appreciations ? <span>❤ {project.stats.appreciations}</span> : null}
           {project.stats?.views ? <span>👁 {project.stats.views}</span> : null}
