@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+    <head>
+        <title>关于我们 | Behance Portfolio Page</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css">
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Cantata+One|Open+Sans:300,600">
+        <link rel="stylesheet" href="./css/style.min.css">
+    </head>
+    <body class="about-page">
+        <nav class="site-nav">
+            <a href="/">作品集</a>
+            <a href="/about">关于我们</a>
+        </nav>
+
+        <main class="about">
+            <section class="about__hero">
+                <p class="about__eyebrow">Behance Showcase</p>
+                <h1 class="about__title">把好作品带到你面前</h1>
+                <p class="about__lede">这个站点基于 Behance API，帮助你快速聚合并呈现个人或团队的精选作品。无论是品牌设计、插画还是交互案例，都能在这里整齐展示。</p>
+            </section>
+
+            <section class="about__grid">
+                <div class="about__card">
+                    <h2>我们关注</h2>
+                    <ul class="about__list">
+                        <li><strong>作品深度：</strong> 通过项目详情页拆解创作思路与过程。</li>
+                        <li><strong>体验一致：</strong> 同一套字体与布局，让访客不分心。</li>
+                        <li><strong>性能与稳定：</strong> 静态资源预构建，API 通过 Node 代理更可靠。</li>
+                    </ul>
+                </div>
+                <div class="about__card">
+                    <h2>你可以</h2>
+                    <ul class="about__list">
+                        <li>在首页配置自己的 Behance 用户名，自动拉取作品。</li>
+                        <li>使用项目页链接分享单个作品：`/project.html?id=xxxxx`。</li>
+                        <li>按需扩展样式或组件，让作品集更契合你的品牌。</li>
+                    </ul>
+                </div>
+                <div class="about__card">
+                    <h2>联系与支持</h2>
+                    <p class="about__text">想要定制或部署支持，可在 `config/config.js` 中设置你的社交链接，也可以直接更新页面中的联系方式。</p>
+                    <p class="about__text"><a class="about__link" href="https://www.behance.net" target="_blank" rel="noopener noreferrer">访问 Behance</a></p>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Behance Project Detail</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+            if ('attachEvent' in document.documentElement) {
+                document.createElement('header');
+                document.createElement('figure');
+                document.createElement('footer');
+            }
+        </script>
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css">
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Cantata+One|Open+Sans:300,600">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body class="project-page">
+        <nav class="site-nav">
+            <a href="/">作品集</a>
+            <a href="/about">关于我们</a>
+            <a href="/contact">联系我们</a>
+        </nav>
+
+        <img class="loading" src="./svg/loading-spin.svg" alt="Loading">
+
+        <main id="project-container" class="project-page__container is-hidden">
+            <section class="project-hero" id="project-hero">
+                <div class="project-hero__cover" id="project-cover"></div>
+                <div class="project-hero__overlay"></div>
+                <div class="project-hero__inner">
+                    <div class="project-hero__intro">
+                        <p id="project-fields" class="project-hero__fields"></p>
+                        <h1 id="project-title" class="project-hero__title"></h1>
+                        <div id="project-meta" class="project-hero__meta"></div>
+                    </div>
+                    <div class="project-owner" id="project-owner">
+                        <img id="project-owner-avatar" class="project-owner__avatar" alt="Owner avatar">
+                        <div>
+                            <p id="project-owner-name" class="project-owner__name"></p>
+                            <p id="project-owner-role" class="project-owner__role"></p>
+                            <p id="project-owner-location" class="project-owner__location"></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="project-body" class="project-page__modules"></section>
+            <p class="project-page__back"><a href="/">← 返回作品列表</a></p>
+        </main>
+
+        <div id="project-error" class="project-page__error is-hidden"></div>
+
+        <script src="./js/project.js"></script>
+    </body>
+</html>
