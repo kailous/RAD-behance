@@ -10,7 +10,6 @@ export default function Hero({ strings }) {
               allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
-              title="RAD"
             />
     </section>
   );

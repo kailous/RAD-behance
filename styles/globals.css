@@ -30,9 +30,9 @@ a { color: inherit; text-decoration: none; }
 
 main {
   width: 100%;
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
-  padding: 0 24px 120px;
+  /* padding: 0 24px 120px; */
 }
 
 .page-error {
