@@ -5,7 +5,6 @@ export default function PortfolioGrid({ projects, title, emptyText }) {
   return (
     <section className={styles.section} id="portfolio">
       <div className={styles.header}>
-        <p className={styles.eyebrow}>Behance</p>
         <h2 className={styles.title}>{title || '精选作品'}</h2>
       </div>
       <div className={styles.grid}>
