@@ -1,0 +1,44 @@
+{
+  "brand": "RAD Studio",
+  "nav": {
+    "home": "作品集",
+    "about": "关于我们",
+    "contact": "联系我们"
+  },
+  "hero": {
+    "eyebrow": "Behance Showcase",
+    "title": "让你的作品集更有态度",
+    "subtitle": "RAD Studio 重新设计了作品集体验，用简洁的组件、纯 API、快速加载呈现每一条 Behance 作品。",
+    "cta": "查看作品",
+    "meta": "实时同步 Behance · 设计工作室风格 · 响应式"
+  },
+  "portfolio": {
+    "title": "精选作品",
+    "empty": "暂无作品，请稍后再试。",
+    "error": "获取作品失败，请稍后重试。"
+  },
+  "about": {
+    "title": "我们关注体验与美学",
+    "lede": "从品牌视觉到交互细节，以统一的语言表达作品价值。",
+    "bullets": [
+      "一致的网格与留白，突出作品主体",
+      "高对比配色与动态渐变，让展示更具气场",
+      "API 化数据，方便后续接入多语言与新终端"
+    ]
+  },
+  "contact": {
+    "title": "告诉我们你的想法",
+    "lede": "需要定制站点、作品呈现或品牌升级？留下联系方式，我们会尽快回复。",
+    "note": "表单为示例，提交后不会发送到服务器。如需接入收件方式，请在后端配置。"
+  },
+  "footer": {
+    "rights": "© RAD Studio · Crafted for portfolio showcases.",
+    "powered": "Powered by Behance"
+  },
+  "project": {
+    "back": "← 返回作品列表",
+    "loading": "正在加载作品...",
+    "error": "获取作品失败，请稍后再试。",
+    "viewOnBehance": "在 Behance 查看"
+  }
+}

@@ -1,51 +1,35 @@
-# Behance
-> Behance Portfolio Page developed with Vanilla JS
+# RAD Studio · Behance Showcase (Next.js)
 
-![](https://raw.github.com/pinceladasdaweb/behance/master/screenshot.png)
+现代化、前后端分离的作品集站点：Next.js + 自建 API 代理 Behance。样式重构为设计工作室风格，所有 UI 文案集中在 `content/strings/zh.json` 方便多语言扩展。
 
-## Motivation
+## 主要特性
+- Next.js（Pages Router）+ React 组件化，适配 Vercel 一键部署。
+- API Routes 代理 Behance：`/api/behance`、`/api/behance/projects/[id]`，纯 JSON，无前端耦合。
+- 统一头部/页脚组件，作品列表、详情、关于、联系页面样式一致。
+- 文案集中管理：`content/strings/zh.json`，后续可添加多语文件并按需切换。
+- 设计更新：深色渐变背景、强调色、统一排版与卡片网格。
 
-I created a version of [Vanilla JS](http://vanilla-js.com/) based on the original [tuts+](http://webdesign.tutsplus.com/tutorials/how-to-use-the-behance-api-to-build-a-custom-portfolio-web-page--cms-20884). [Demo here](http://www.pinceladasdaweb.com.br/blog/uploads/behance/).
-
-## Project structure
-
-- `public/`: All static pages and built assets (`index.html`, `project.html`, `about.html`, compiled CSS/JS, svg).
-- `src/js` and `src/css`: Source files for the listing (`app.js`) and detail (`project.js`) pages plus styles.
-- `config/config.js`: Local defaults for your Behance client ID and user/profile links.
-- `server.js`: Express server that serves static files and proxies the Behance API.
-
-## How to use?
-
-In file [`index.html`](index.html), just fill out the user variable with your Behance username:
-
-```javascript
-Behance({
-    user: 'behance-username-here'
-});
-```
-In file [`config.js`](config/config.js) you must populate the variable `clientId` (or set the `BEHANCE_CLIENT_ID` environment variable) with the Client ID of your app created in central [Developers Behance](https://www.behance.net/dev/apps).
-
-## Local development
-
+## 开发
 ```bash
 npm install
-npm start
+npm run dev
 ```
+本地默认使用 `config/config.js` 中的 `behance.clientId` 和 `behance.defaultUser`，也可设置环境变量：
+- `BEHANCE_CLIENT_ID`（必填，上线请用环境变量）
+- `NEXT_PUBLIC_BEHANCE_USER`（前端默认用户，可选）
 
-The `npm start` command runs a small Express server that serves the static files and proxies requests from `/api/behance?user=<username>` to the Behance API.
+## 生产 / Vercel
+1. 在 Vercel 项目环境变量中配置 `BEHANCE_CLIENT_ID` 与可选的 `NEXT_PUBLIC_BEHANCE_USER`。
+2. 直接 `vercel` 或推送到绑定分支，Vercel 会自动构建 Next.js 并生成 Serverless API。
 
-- Profile + projects list: `GET /api/behance?user=<username>`
-- Single project (for an inner page/detail view): `GET /api/behance/projects/<projectId>` (the homepage already links to `project.html?id=<projectId>` which calls this endpoint under the hood)
-- About page: `GET /about`
-- Contact page (static form demo): `GET /contact`
-If you change anything in `src/js` or `src/css`, run `npm run build` (or `npx gulp`) to regenerate the minified assets loaded by the HTML pages.
+## 项目结构（核心）
+- `pages/`：Next 页（`index`, `about`, `contact`, `project/[id]`）与 API 路由。
+- `components/`：头部、页脚、作品卡片、模块渲染等。
+- `content/strings/zh.json`：所有 UI 文案字典。
+- `styles/`：全局样式与组件样式。
+- `config/config.js`：后端默认配置（Behance clientId / default user）。
 
-## Browser support
-
-![IE](https://raw.githubusercontent.com/alrra/browser-logos/master/internet-explorer/internet-explorer_48x48.png) | ![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/master/chrome/chrome_48x48.png) | ![Firefox](https://raw.githubusercontent.com/alrra/browser-logos/master/firefox/firefox_48x48.png) | ![Opera](https://raw.githubusercontent.com/alrra/browser-logos/master/opera/opera_48x48.png) | ![Safari](https://raw.githubusercontent.com/alrra/browser-logos/master/safari/safari_48x48.png)
---- | --- | --- | --- | --- |
-IE 8+ ✔ | Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ |
-
-## License
-
-[MIT](LICENSE)
+## 可继续优化
+- 增加多语言切换（按需加载其他语言 JSON）。
+- 加入 SWR/React Query 做缓存与错误重试。
+- 为作品详情添加骨架屏、懒加载与占位图优化。

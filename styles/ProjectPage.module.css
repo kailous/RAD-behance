@@ -1,0 +1,68 @@
+.page {
+  padding-top: 40px;
+  display: grid;
+  gap: 32px;
+}
+
+.hero {
+  display: grid;
+  gap: 18px;
+}
+
+.meta {
+  display: grid;
+  gap: 6px;
+}
+
+.fields {
+  color: var(--accent-2);
+  margin: 0;
+  letter-spacing: 0.4px;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(28px, 4.2vw, 40px);
+}
+
+.stats {
+  display: flex;
+  gap: 12px;
+  color: var(--text-muted);
+  align-items: center;
+}
+
+.stats a {
+  color: var(--accent);
+}
+
+.cover {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.cover img {
+  width: 100%;
+  display: block;
+}
+
+.coverFallback {
+  height: 240px;
+  background: linear-gradient(135deg, rgba(125, 91, 255, 0.16), rgba(70, 210, 194, 0.16));
+}
+
+.body {
+  display: grid;
+  gap: 16px;
+}
+
+.back {
+  text-align: left;
+}
+
+.back a {
+  color: var(--accent-2);
+}

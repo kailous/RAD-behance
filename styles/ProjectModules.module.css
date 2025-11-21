@@ -1,0 +1,40 @@
+.modules {
+  display: grid;
+  gap: 24px;
+}
+
+.module {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+.module img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.caption {
+  color: var(--text-muted);
+  margin-top: 10px;
+}
+
+.text {
+  color: var(--text);
+}
+
+.embed iframe {
+  width: 100%;
+  min-height: 360px;
+}
+
+.empty {
+  color: var(--text-muted);
+  text-align: center;
+  padding: 24px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
