@@ -13,7 +13,7 @@ export default function Hero({ strings }) {
             /> */}
             {/* 插入videos/rad.mp4 视频 去掉播放器UI 自动播放 循环播放 静音 */}
             <video
-              src="/videos/rad.mp4"
+              src="https://rad-e5b1.obs.cn-east-3.myhuaweicloud.com/rad.mp4"
               autoPlay
               loop
               muted
